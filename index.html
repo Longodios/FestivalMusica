@@ -5,11 +5,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock & IDM Festival</title>
-    <link rel="stylesheet" src='build\css\app.css'>
+    <link rel="stylesheet" href='build\css\app.css'>
 </head>
 
 <body>
-    <h1> Rock & IDM Festival</h1>
+
+
+    <header class="header">
+        <div class="contenedor contenido-header">
+            <h1> Rock & EDM Festival </h1>
+
+
+            <nav class="navegacion__principal">
+                <a href="#"> Line Up</a>
+                <a href="#"> Galería</a>
+                <a href="#"> Boletos</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="video">
+        <div class="overlay">
+            <div class="contenedor contenido-video">
+                <h2> Rock & IDM Festival </h2>
+                <span> Enero 2021 , Isla de Arosa</span>
+            </div>
+        </div>
+
+        <!--Controls: nos despliega un menu de controles
+            autoplay: hace que el video se reproduzca
+            muted: hace que el video este muteado y IMPORTANTE PARA QUE SE REPRODUZCA EN GOOGLE CHROME
+            loop: hace que el video cuando termine vuelva empezar (en bucle)-->
+        <video controls autoplay muted loop>
+            <source src="video/concierto.mp4" type="video/mp4">
+            <source src="video/concierto.ogg" type="video/ogg">
+            <source src="video/concierto.webm" type="video/webm">
+        </video>
+    </div>
 </body>
 
 </html>
