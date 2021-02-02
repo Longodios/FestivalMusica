@@ -13,11 +13,28 @@
     }
 }
 
-.contenido-video {
-    margin-top: 2rem;
-}
-
 video {
     display: block;
     width: 100%;
+}
+
+.contenido-video {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    h2 {
+        display: flex;
+        flex-direction: column;
+        color: $blanco;
+        font-size: 6.6rem;
+        font-weight: bold;
+    }
+    span {
+        background-color: $rosa;
+        padding: 1rem;
+        color: $blanco;
+        font-size: 2.3rem;
+        font-weight: bold;
+        width: 65%;
+    }
 }
