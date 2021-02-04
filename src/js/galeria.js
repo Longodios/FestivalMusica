@@ -9,9 +9,17 @@ function crearGaleria() {
         const imagen = document.createElement('IMG');
         imagen.src = `build/img/thumb/${i}.webp`;
 
+        //Añadir función de mostrarImagen
+
+        imagen.onclick = mostrarImagen;
+
         const lista = document.createElement('LI');
         lista.appendChild(imagen);
 
         galeria.appendChild(lista);
     }
+}
+
+function mostrarImagen() {
+    console.log('Diste click en una imagen');
 }

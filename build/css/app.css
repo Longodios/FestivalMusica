@@ -316,6 +316,8 @@ html {
 body {
   font-family: "Montserrat", sans-serif;
   font-size: 1.6rem; }
+  body.fijar-body {
+    overflow: hidden; }
 
 p {
   font-size: 2rem;
@@ -356,7 +358,7 @@ h3 {
 .header {
   background-color: #4cb8b3; }
   .header .contenido-header {
-    padding: 2.5rem 0; }
+    padding: 2.5rem; }
     @media (min-width: 768px) {
       .header .contenido-header {
         display: flex;
@@ -369,6 +371,10 @@ h3 {
     @media (min-width: 768px) {
       .header h1 {
         margin-bottom: 0; } }
+  .header.fijo {
+    position: fixed;
+    width: 100%;
+    box-shadow: 0 .3rem .4rem #444; }
 
 .navegacion__principal {
   display: flex;
@@ -521,3 +527,70 @@ video {
       display: grid;
       grid-template-columns: repeat(6, 1fr);
       gap: 5rem; } }
+
+.overlay {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  display: grid;
+  place-items: center; }
+
+.btn-cerrar {
+  width: 5rem;
+  height: 5rem;
+  background-color: #fff;
+  display: grid;
+  place-items: center;
+  font-weight: 900;
+  font-size: 3rem; }
+
+.boletos {
+  padding: 5rem 0; }
+  .boletos h3 {
+    text-align: center;
+    color: #fff; }
+  .boletos .contenedor-boletos {
+    margin-top: 2.5rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5rem; }
+  .boletos .plan p {
+    color: #fff;
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 2rem; }
+  .boletos .pase {
+    width: 100%;
+    border-spacing: 0; }
+    .boletos .pase thead {
+      background-color: #f53756; }
+      .boletos .pase thead th {
+        padding: 1.25rem;
+        color: #fff;
+        text-transform: uppercase;
+        font-weight: 300;
+        font-size: 2rem; }
+    .boletos .pase tbody {
+      background-color: #fff; }
+      .boletos .pase tbody td {
+        padding: 1.25rem;
+        border-bottom: 1px solid #e1e1e1; }
+      .boletos .pase tbody tr:last-of-type td {
+        border: none; }
+    .boletos .pase tfoot {
+      background-color: #752f97; }
+      .boletos .pase tfoot td {
+        padding: 1.25rem;
+        text-align: center;
+        color: #fff;
+        font-size: 3rem; }
+
+.footer {
+  background-color: #f53756;
+  text-align: center;
+  padding: 1.25rem; }
+  .footer p {
+    color: #fff;
+    margin: 0; }

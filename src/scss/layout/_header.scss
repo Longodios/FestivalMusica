@@ -1,7 +1,7 @@
 .header {
     background-color: $verde;
     .contenido-header {
-        padding: $separacion / 2 0;
+        padding: $separacion / 2;
         @include tablet {
             display: flex;
             justify-content: space-between;
@@ -15,6 +15,11 @@
         @include tablet {
             margin-bottom: 0;
         }
+    }
+    &.fijo {
+        position: fixed;
+        width: 100%;
+        box-shadow: 0 .3rem .4rem #444;
     }
 }
 
