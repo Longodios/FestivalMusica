@@ -6,6 +6,12 @@ const notify = require('gulp-notify');
 const webp = require('gulp-webp');
 const concat = require('gulp-concat');
 
+//Utilidades CSS
+
+const autoprefixer = require('autoprefixer');
+const postcss = require('gulp-postcss');
+const sourcemaps = require('gulp-sourcemaps');
+
 const paths = {
     imagenes: 'src/img/**/*',
     scss: 'src/scss/**/*.scss',
@@ -16,18 +22,10 @@ const paths = {
 
 function css() {
     return src(paths.scss)
+        .pipe(sourcemaps.init())
         .pipe(sass())
-        .pipe(dest('./build/css'))
-
-
-}
-
-function minificarcss() {
-    return src(paths.scss)
-        .pipe(sass({
-
-            outputStyle: 'compressed'
-        }))
+        .pipe(postcss([autoprefixer(), ]))
+        .pipe(sourcemaps.write('.'))
         .pipe(dest('./build/css'))
 
 
@@ -60,7 +58,7 @@ function watchArchivos() {
 }
 
 exports.css = css;
-exports.minificarcss = minificarcss;
+
 exports.imagenes = imagenes;
 exports.watchArchivos = watchArchivos;
 
